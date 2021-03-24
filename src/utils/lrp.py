@@ -1,5 +1,5 @@
 import os
-import lrp
+from TorchLRP import lrp
 import copy
 import torch
 import numpy as np
