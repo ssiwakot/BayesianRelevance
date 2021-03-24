@@ -17,7 +17,7 @@ from utils.savedir import *
 from utils.seeding import *
 from utils.model_settings import baseNN_settings
 
-import lrp
+from TorchLRP import lrp
 
 DEBUG = False
 
