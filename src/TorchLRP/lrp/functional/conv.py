@@ -24,7 +24,7 @@ def _backward_rho(ctx, relevance_output):
     Z                = ctx.incr(F.conv2d(input, weight, bias, ctx.stride, ctx.padding, ctx.dilation, ctx.groups))
 
     relevance_output = relevance_output / Z
-    relevance_input  = F.conv_transpose2d(relevance_output, weight, None, padding=1)
+    relevance_input  = F.conv_transpose2d(relevance_output, weight, None, padding=0)
     relevance_input  = relevance_input * input
 
     trace.do_trace(relevance_input) 
